@@ -67,7 +67,6 @@ class ProductList extends Component {
                     <div className="col-12 d-none d-lg-block d-xl-block">
                         <div className="card ">
                             <div className="card-header d-flex justify-content-end">
-                                <span className="mr-3">Change Layout: </span>
                                 <LayoutMode len={3} isActive={this.state.gridValue === 3} click={this.changeLayout}/>
                                 <LayoutMode len={4} isActive={this.state.gridValue === 4} click={this.changeLayout}/>
                             </div>

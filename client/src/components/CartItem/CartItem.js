@@ -4,6 +4,7 @@ import {shortenTitle} from "../../pipes/shortenTitle";
 import {formatMoney} from "../../pipes/priceFormatter";
 import './CartItem.scss';
 import {removeProductToCart} from "../../actions";
+import {Link} from "react-router-dom";
 
 const CartItem = (
     {
@@ -27,7 +28,7 @@ const CartItem = (
     return (
         <div className="row align-items-center mb-3">
             <div className="col-12 col-sm-12 col-md-2 text-center">
-                <img className="img-responsive" src={img} style={{height: '60%', width: '60%'}} alt={description}
+                <div className="img-responsive" style={{backgroundImage: "url("+img+")", height:"250px", backgroundRepeat: "no-repeat", backgroundSize: "contain", backgroundPosition: "center"}} alt={description}
                 />
             </div>
             <div className="col-12 text-sm-center col-sm-12 text-md-left col-md-6">

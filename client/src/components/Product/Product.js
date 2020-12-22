@@ -65,12 +65,12 @@ const Product = (props) => {
 
     return (
         <div className="card h-100 product">
-            <Link to={`/products/${id}`} className="product__link"><img
+            <Link to={`/products/${id}`} className="product__link"><div
                 onMouseMove={handleImageChange}
                 onMouseOut={handleMouseOut}
                 onTouchMove={handleImageChange}
                 onTouchEnd={handleMouseOut}
-                className="card-img-top product__img" src={img} alt={title} ref={imageRef}/>
+                className="card-img-top product__img" style={{backgroundImage: "url("+img+")", height:"250px", backgroundRepeat: "no-repeat", backgroundSize: "contain", backgroundPosition: "center"}} alt={title} ref={imageRef}/>
                 <SlideDots len={images.length} activeItem={aItem} changeItem={changeImage}/>
             </Link>
             <div className="card-body product__text">

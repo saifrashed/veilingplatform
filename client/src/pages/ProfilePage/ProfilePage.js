@@ -9,7 +9,7 @@ const ProfilePage = (props) => {
             <div className="container" style={{paddingTop: '6rem'}}>
 
                 <div className="row">
-                    <div className="col-3">
+                    <div className="col-sm-12 col-md-4 col-lg-3 p-2">
                         <div className="card">
                             <div className="card-header bg-dark text-light">
                                 <i className="fas fa-user pr-2"></i>
@@ -19,7 +19,6 @@ const ProfilePage = (props) => {
 
                             <div className="card-body">
                                 <ul className="list-group list-group-flush">
-
                                     <NavLink to="/profile/favorites">
                                         <li className="list-group-item">Gewonnen veilingen</li>
                                     </NavLink>
@@ -49,7 +48,7 @@ const ProfilePage = (props) => {
                     </div>
 
 
-                    <div className="col-9">
+                    <div className="col-sm-12 col-md-8 col-lg-9 p-2">
                         <BrowserRouter>
                             <Switch>
                                 <Route exact path={'/profile/favorites'} component={ShoppingCart}/>

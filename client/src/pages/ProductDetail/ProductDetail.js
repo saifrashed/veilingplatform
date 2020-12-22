@@ -10,7 +10,7 @@ const ProductDetail = (props) => {
     return (
         <div className="container" style={{padding: '6rem 0'}}>
             <div className="card">
-                <div className="row">
+                <div className="row" style={{margin: "auto"}}>
                     <ProductSlider images={props.product.images}/>
                     <ProductDetailComponent product={props.product}/>
                 </div>
