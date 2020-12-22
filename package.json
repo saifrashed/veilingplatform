@@ -13,15 +13,15 @@
   "author": "Saif Rashed",
   "license": "ISC",
   "dependencies": {
-    "@mollie/api-client": "^3.1.0",
+    "@mollie/api-client": "^3.4.0",
     "axios": "^0.19.2",
     "bcrypt": "^4.0.1",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.9.7",
-    "nodemailer": "^6.4.6",
-    "nodemon": "^2.0.2"
+    "mongoose": "^5.11.8",
+    "nodemailer": "^6.4.17",
+    "nodemon": "^2.0.6"
   },
   "description": "Landing website"
 }
