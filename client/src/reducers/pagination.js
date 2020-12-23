@@ -8,7 +8,7 @@ const initialState = {
 };
 
 
-export const paginationReducer = (state = initialState, action) => {
+export const pagination = (state = initialState, action) => {
     switch (action.type) {
         case PREV_PAGE:
             if(state.currentPage === 1) return state;

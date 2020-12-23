@@ -7,7 +7,7 @@ const initialState = {
 };
 
 
-const auctionReducer = (state = initialState, action) => {
+const auction = (state = initialState, action) => {
     let updatedCart;
     let updatedItemIndex;
 
@@ -46,4 +46,4 @@ const auctionReducer = (state = initialState, action) => {
     }
 };
 
-export default auctionReducer;
+export default auction;

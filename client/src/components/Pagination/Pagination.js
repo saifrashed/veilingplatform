@@ -68,7 +68,7 @@ class Pagination extends Component {
 
         console.log(this.props);
 
-        const pages =this.getPages().map(pageNum => {
+        const pages = this.getPages().map(pageNum => {
 
             let buttonClass = 'page-item';
 

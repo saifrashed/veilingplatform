@@ -2,7 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {formatMoney} from "../../pipes/priceFormatter";
 import CartItem from "../CartItem/CartItem";
-import {NavLink} from "react-router-dom";
 
 const Favorites = (props) => {
     return (
@@ -19,7 +18,8 @@ const Favorites = (props) => {
                      <h1 className="display-4 mt-5 text-center">Het is hier zo leeg...</h1>
                      <p className="text-center">Bewaar hier je favoriete veilingen, zodat je ze makkelijk en snel weer
                          terugvindt!</p>
-                     <div className="text-center"><a href="#" className="btn btn-info">Bekijk hier alle veilingen</a></div>
+                     <div className="text-center"><a href="#" className="btn btn-info">Bekijk hier alle veilingen</a>
+                     </div>
                  </div>}
             </div>
             <div className="card-footer">

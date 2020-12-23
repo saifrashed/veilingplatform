@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter, NavLink, Route, Switch} from "react-router-dom";
 
-import ShoppingCart from "../../components/Favorites/Favorites";
+import Favorites from "../../components/Favorites/Favorites";
 
 const ProfilePage = (props) => {
     return (
@@ -19,29 +19,29 @@ const ProfilePage = (props) => {
 
                             <div className="card-body">
                                 <ul className="list-group list-group-flush">
-                                    <NavLink to="/profile/favorites">
+                                    <a href="/profile/#">
                                         <li className="list-group-item">Gewonnen veilingen</li>
-                                    </NavLink>
+                                    </a>
 
-                                    <NavLink to="/profile/favorites">
+                                    <a href="/profile/#">
                                         <li className="list-group-item">Biedingen</li>
-                                    </NavLink>
+                                    </a>
 
-                                    <NavLink to="/profile/favorites">
+                                    <a href="/profile/favorites">
                                         <li className="list-group-item">Favorieten</li>
-                                    </NavLink>
+                                    </a>
 
-                                    <NavLink to="/profile/favorites">
+                                    <a href="/profile/#">
                                         <li className="list-group-item">Aanbevolen voor jou</li>
-                                    </NavLink>
+                                    </a>
 
-                                    <NavLink to="/profile/favorites">
+                                    <a href="/profile/#">
                                         <li className="list-group-item">Profiel en instellingen</li>
-                                    </NavLink>
+                                    </a>
 
-                                    <NavLink to="/profile/favorites">
+                                    <a href="/profile/#">
                                         <li className="list-group-item">Prestaties</li>
-                                    </NavLink>
+                                    </a>
                                 </ul>
                             </div>
                         </div>
@@ -51,7 +51,7 @@ const ProfilePage = (props) => {
                     <div className="col-sm-12 col-md-8 col-lg-9 p-2">
                         <BrowserRouter>
                             <Switch>
-                                <Route exact path={'/profile/favorites'} component={ShoppingCart}/>
+                                <Route path={'/profile/favorites'} component={Favorites}/>
                             </Switch>
                         </BrowserRouter>
                     </div>

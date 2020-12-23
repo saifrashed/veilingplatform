@@ -77,14 +77,28 @@ const Product = (props) => {
                 <h4 className="card-title product__title">
                     <Link to={`/products/${id}`}>{title}</Link>
                 </h4>
-                <h5 className="product__price">${formatMoney(price)}</h5>
+                <h5 className="product__price">${formatMoney(price)} <strong><span className="text-muted" style={{borderLeft: "1px solid grey", paddingLeft: "5px"}}>10:00:00</span></strong></h5>
+
                 <p className="card-text product__description">{description}</p>
-                <button
-                    onClick={() => {
-                        props.dispatch(addProductToCart({...props.product}))
-                    }}
-                    className="btn btn-info product__add-to-cart">Add to cart
-                </button>
+
+                <div className="row">
+
+                    <div className="col-9" style={{paddingRight: "5px"}}>
+                        <Link to={`/products/${id}`}>
+                        <button className="btn btn-info product__add-to-cart">Lees Meer
+                        </button>
+                        </Link>
+                    </div>
+
+                    <div className="col-3" style={{paddingLeft: "5px"}}>
+                        <button
+                            onClick={() => {
+                                props.dispatch(addProductToCart({...props.product}))
+                            }}
+                            className="btn btn-info product__add-to-cart"><i className="far fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     );

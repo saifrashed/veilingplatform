@@ -10,7 +10,9 @@ import Home from "./pages/Home/Home";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
-import ProfilePage from "./pages/ProfilePage/ProfilePage";
+import ProfilePage from "./pages/Profile/ProfilePage";
+import Registration from "./pages/Registration/Registration";
+import Login from "./pages/Login/Login";
 
 
 
@@ -30,7 +32,10 @@ class App extends Component {
 
                     <Route exact path={'/products'} component={Home}/>
                     <Route exact path={'/products/:id'} component={ProductDetail}/>
-                    <Route exact patr={'/profile'} component={ProfilePage}/>
+                    <Route path={'/profile'} component={ProfilePage}/>
+                    <Route exact path={'/registration'} component={Registration}/>
+                    <Route exact path={'/login'} component={Login}/>
+
                 </Switch>
                 <Footer/>
             </React.Fragment>
