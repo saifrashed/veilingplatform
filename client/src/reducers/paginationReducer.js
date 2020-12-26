@@ -1,4 +1,4 @@
-import {COUNT_ITEM, GO_PAGE, NEXT_PAGE, PREV_PAGE} from "../actions";
+import {COUNT_ITEM, GO_PAGE, NEXT_PAGE, PREV_PAGE} from "../actions/types.js";
 
 const initialState = {
     perPage: 12,

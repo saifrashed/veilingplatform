@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import BrandFilter from "../../components/BrandFilter/BrandFilter";
+import SubCategoryFilter from "../../components/SubCategoryFilter/SubCategoryFilter";
 import OrderFilter from "../../components/OrderFilter/OrderFilter";
 
 class FilterBar extends Component {
@@ -8,10 +8,10 @@ class FilterBar extends Component {
             <div className="col-lg-3">
                 <div className="row">
                     <div className="col-12">
-                        <BrandFilter/>
+                        <OrderFilter/>
                     </div>
                     <div className="col-12">
-                        <OrderFilter/>
+                        <SubCategoryFilter/>
                     </div>
                 </div>
             </div>

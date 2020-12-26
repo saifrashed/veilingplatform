@@ -1,6 +1,7 @@
-const express = require('express');
-const cors    = require('cors');
-const path    = require('path');
+const express  = require('express');
+const cors     = require('cors');
+const mongoose = require('mongoose');
+const path     = require('path');
 
 require('dotenv').config();
 
@@ -10,10 +11,22 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// mailer
-const mailerRouter = require('./routes/mailer');
+const uri = process.env.ATLAS_URI;
+mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true});
 
-app.use('/mailer', mailerRouter);
+const connection = mongoose.connection;
+connection.once('open', () => {
+    console.log('MongoDB database connection established successfully')
+});
+
+
+// declare routers
+const usersRouter = require('./routes/users');
+
+
+// include routers in application
+app.use('/users', usersRouter);
+
 
 if (process.env.NODE_ENV === 'production') {
     // Express will serve up production assets i.e. main.js

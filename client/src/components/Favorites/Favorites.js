@@ -39,11 +39,11 @@ const mapStateToProps = state => {
     console.log(state, 'state has changed');
 
     return {
-        cartItems:     state.auction.cart,
-        cartItemCount: state.auction.cart.reduce((count, curItem) => {
+        cartItems:     state.auctionData.cart,
+        cartItemCount: state.auctionData.cart.reduce((count, curItem) => {
             return count + curItem.quantity;
         }, 0),
-        totalPrice:    state.auction.cart.reduce((count, curItem) => {
+        totalPrice:    state.auctionData.cart.reduce((count, curItem) => {
             return count + (curItem.price * curItem.quantity);
         }, 0)
     }

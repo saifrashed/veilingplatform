@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import {goPage, nextPage, prevPage} from "../../actions";
+import {goPage, nextPage, prevPage} from "../../actions/types";
 
 class Pagination extends Component {
 

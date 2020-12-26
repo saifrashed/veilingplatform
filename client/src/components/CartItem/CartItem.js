@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {shortenTitle} from "../../pipes/shortenTitle";
 import {formatMoney} from "../../pipes/priceFormatter";
 import './CartItem.scss';
-import {removeProductToCart} from "../../actions";
+import {removeAuctionFromFavorites} from "../../actions/auctionActions";
 
 const CartItem = (
     {
@@ -20,7 +20,7 @@ const CartItem = (
     console.log(id);
     const [itemQuantity, setItemQuantity] = useState(quantity);
     const removeItem                      = () => {
-        dispatch(removeProductToCart(id));
+        dispatch(removeAuctionFromFavorites(id));
     };
 
 

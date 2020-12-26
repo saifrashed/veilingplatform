@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {formatMoney} from "../../pipes/priceFormatter";
-import {addProductToCart} from "../../actions";
+import {addAuctionToFavorites} from "../../actions/auctionActions";
 
 const ProductDetail = (props) => {
 
@@ -23,7 +23,7 @@ const ProductDetail = (props) => {
 
 
     const onCart = () => {
-        props.dispatch(addProductToCart(props.product));
+        props.dispatch(addAuctionToFavorites(props.product));
     };
 
     return (

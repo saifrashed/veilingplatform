@@ -21,7 +21,7 @@ const ProductDetail = (props) => {
 
 const mapStateToProps = (state, props) =>  {
 
-    const product = state.auction.products.find(product => product.id === +props.match.params.id);
+    const product = state.auctionData.products.find(product => product.id === +props.match.params.id);
 
     return {
         product

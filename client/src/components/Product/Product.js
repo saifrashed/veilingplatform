@@ -6,7 +6,7 @@ import {cumulativeOffSet} from "../../utilities/cumulativeOffset";
 
 import './Product.scss';
 import SlideDots from "../SlideDots/SlideDots";
-import {addProductToCart} from "../../actions";
+import {addAuctionToFavorites} from "../../actions/auctionActions";
 
 
 const Product = (props) => {
@@ -93,7 +93,7 @@ const Product = (props) => {
                     <div className="col-3" style={{paddingLeft: "5px"}}>
                         <button
                             onClick={() => {
-                                props.dispatch(addProductToCart({...props.product}))
+                                props.dispatch(addAuctionToFavorites({...props.product}))
                             }}
                             className="btn btn-info product__add-to-cart"><i className="far fa-heart"></i>
                         </button>

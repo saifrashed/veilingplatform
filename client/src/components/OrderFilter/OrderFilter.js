@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import './OrderFilter.scss';
-import {clearOrderBy, ORDER_BY_ASC, ORDER_BY_DESC, orderByAsc, orderByDesc} from "../../actions";
+import {ORDER_BY_ASC, ORDER_BY_DESC} from "../../actions/types.js";
+import {clearOrderBy, orderByAsc, orderByDesc} from "../../actions/filterActions";
 
 const OrderFilter = ({dispatch}) => {
 

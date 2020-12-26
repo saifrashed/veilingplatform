@@ -1,5 +1,5 @@
 import {store} from "../App";
-import {countItem} from "../actions";
+import {countItem} from "../actions/types.js";
 
 export const paginationPipe = (state,args) => {
     if (!args || !args.perPage || !args.currentPage) {

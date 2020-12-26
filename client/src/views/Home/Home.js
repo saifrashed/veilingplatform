@@ -7,8 +7,7 @@ const Home = () => {
         <React.Fragment>
             <div className="container" style={{paddingTop: '6rem'}} >
                 <div className="row">
-                    <FilterBar/>
-                    <ProductList/>
+                    Hier komt de homepagina
                 </div>
             </div>
         </React.Fragment>

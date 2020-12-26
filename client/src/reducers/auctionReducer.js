@@ -1,4 +1,4 @@
-import {ADD_PRODUCT_TO_CART, REMOVE_PRODUCT_FROM_CART} from '../actions';
+import {ADD_AUCTION_TO_FAVORITES, REMOVE_AUCTION_FROM_FAVORITES} from '../actions/types.js';
 import {phones} from "../data/phones";
 
 const initialState = {
@@ -7,13 +7,12 @@ const initialState = {
 };
 
 
-const auction = (state = initialState, action) => {
+const auctionData = (state = initialState, action) => {
     let updatedCart;
     let updatedItemIndex;
 
     switch (action.type) {
-
-        case ADD_PRODUCT_TO_CART:
+        case ADD_AUCTION_TO_FAVORITES:
             updatedCart      = [...state.cart];
             updatedItemIndex = updatedCart.findIndex(item => item.id === action.payload.id);
 
@@ -30,7 +29,7 @@ const auction = (state = initialState, action) => {
 
             return {...state, cart: updatedCart};
 
-        case REMOVE_PRODUCT_FROM_CART:
+        case REMOVE_AUCTION_FROM_FAVORITES:
             updatedCart      = [...state.cart];
             updatedItemIndex = updatedCart.findIndex(
                 item => item.id === action.payload
@@ -46,4 +45,4 @@ const auction = (state = initialState, action) => {
     }
 };
 
-export default auction;
+export default auctionData;
